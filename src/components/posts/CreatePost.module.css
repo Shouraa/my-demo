@@ -1,0 +1,101 @@
+.FormContainer {
+  background-color: #b1e0f0;
+  padding: 11.5rem 19.5rem;
+  height: 100vh;
+  width: 100%;
+}
+
+.Wrapper {
+  background-color: #eee;
+  padding: 2rem 3rem;
+  border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #0000001a;
+}
+
+.Title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.FormGroup:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.FormInput,
+.TextArea {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: white;
+  border: none;
+  border-bottom: 3px solid transparent;
+  display: block;
+
+  width: 100%;
+}
+
+.FormInput:focus,
+.TextArea:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #55c57a;
+}
+
+.FormInput:focus:invalid,
+.TextArea:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.FormInput::-webkit-input-placeholder,
+.TextArea::-webkit-textarea-placeholder {
+  color: #999;
+}
+
+.FormInput:placeholder-shown + .FormLabel,
+.TextArea:placeholder-shown + .FormLabel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.FormLabel {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: #9697cb;
+  color: white;
+  /* font-weight: 700; */
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}

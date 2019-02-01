@@ -1,0 +1,17 @@
+.Dashboard {
+  background-color: #b1e0f0;
+  padding: 10.5rem;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1.6rem;
+  /* align-items: center; */
+  text-align: center;
+  /* position: relative; */
+}
+
+.PostList {
+  display: grid;
+  grid-gap: 1rem;
+}

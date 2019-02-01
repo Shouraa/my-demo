@@ -1,0 +1,4 @@
+.PostList {
+  display: grid;
+  grid-row-gap: 1.5rem;
+}
