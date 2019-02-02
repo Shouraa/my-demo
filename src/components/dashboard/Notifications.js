@@ -14,10 +14,8 @@ const Notifications = props => {
               notifications.map(notification => {
                 return (
                   <li key={notification.id}>
-                    <span className={classes.whatever}>
-                      {notification.user}
-                    </span>
-                    <span>{notification.content}</span>
+                    <span className={classes.User}>{notification.user}</span>
+                    <span> {notification.content}</span>
                     <div>{moment(notification.time.toDate()).fromNow()}</div>
                   </li>
                 );

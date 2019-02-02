@@ -6,9 +6,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 1.6rem;
-  /* align-items: center; */
   text-align: center;
-  /* position: relative; */
 }
 
 .PostList {

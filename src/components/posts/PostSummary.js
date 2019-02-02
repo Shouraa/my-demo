@@ -13,12 +13,10 @@ const PostSummary = ({ post }) => {
       </div>
 
       <div className={classes.Lower}>
-        <p className={classes.PostedBy}>
+        <p>
           Posted by {post.authorFirstName} {post.authorLastName}
         </p>
-        <p className={classes.DatePosted}>
-          {moment(post.createdAt.toDate()).calendar()}
-        </p>
+        <p>{moment(post.createdAt.toDate()).calendar()}</p>
       </div>
     </div>
   );
