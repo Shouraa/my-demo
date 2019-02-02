@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import classes from "./CreatePost.module.css";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 import { createPost } from "../../store/actions/postActions";
 
@@ -20,9 +21,14 @@ class CreatePost extends Component {
     event.preventDefault();
     // console.log(this.state);
     this.props.createPost(this.state);
+    this.props.history.push("/");
   };
 
   render() {
+    const { auth } = this.props;
+
+    if (!auth.uid) return <Redirect to="/signin" />;
+
     return (
       <div className={classes.FormContainer}>
         <div className={classes.Wrapper}>
@@ -64,6 +70,12 @@ class CreatePost extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    auth: state.firebase.auth
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     createPost: post => dispatch(createPost(post))
@@ -71,6 +83,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(CreatePost);

@@ -1,4 +1,6 @@
 import React from "react";
+import moment from "moment";
+
 // import { Link } from "react-router-dom";
 
 import classes from "./PostSummary.module.css";
@@ -11,8 +13,12 @@ const PostSummary = ({ post }) => {
       </div>
 
       <div className={classes.Lower}>
-        <p className={classes.PostedBy}>Posted by Akhtar lashi</p>
-        <h4 className={classes.DatePosted}>3rd September, 2am</h4>
+        <p className={classes.PostedBy}>
+          Posted by {post.authorFirstName} {post.authorLastName}
+        </p>
+        <p className={classes.DatePosted}>
+          {moment(post.createdAt.toDate()).calendar()}
+        </p>
       </div>
     </div>
   );

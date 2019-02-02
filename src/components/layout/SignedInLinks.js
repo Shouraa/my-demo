@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { signOut } from "../../store/actions/authActions";
 
 import classes from "./SignedInLinks.module.css";
 
@@ -12,17 +14,26 @@ const SignedInLinks = props => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/" className={classes.btn}>
+        <NavLink to="/" className={classes.btn} onClick={props.signOut}>
           Log Out
         </NavLink>
       </li>
       <li>
         <NavLink to="/" className={classes.btnInitials}>
-          NN
+          {props.profile.initials}
         </NavLink>
       </li>
     </ul>
   );
 };
 
-export default SignedInLinks;
+const mapDispatchToProps = dispatch => {
+  return {
+    signOut: () => dispatch(signOut())
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(SignedInLinks);
