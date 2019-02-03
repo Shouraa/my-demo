@@ -52,7 +52,7 @@ class CreatePost extends Component {
               <textarea
                 className={classes.TextArea}
                 id="content"
-                rows="25"
+                rows="20"
                 onChange={this.handleChange}
                 placeholder="Post Content"
               />

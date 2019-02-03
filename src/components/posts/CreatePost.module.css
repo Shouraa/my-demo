@@ -33,7 +33,6 @@
   border: none;
   border-bottom: 3px solid transparent;
   display: block;
-
   width: 100%;
 }
 
@@ -75,7 +74,6 @@
 .btn:visited {
   background-color: #9697cb;
   color: white;
-  /* font-weight: 700; */
   font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -98,4 +96,9 @@
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.TextArea {
+  overflow-y: scroll;
+  height: 350px;
 }
