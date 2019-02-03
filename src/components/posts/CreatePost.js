@@ -19,7 +19,6 @@ class CreatePost extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // console.log(this.state);
     this.props.createPost(this.state);
     this.props.history.push("/");
   };

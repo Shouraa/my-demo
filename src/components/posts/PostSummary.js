@@ -1,8 +1,6 @@
 import React from "react";
 import moment from "moment";
 
-// import { Link } from "react-router-dom";
-
 import classes from "./PostSummary.module.css";
 
 const PostSummary = ({ post }) => {
